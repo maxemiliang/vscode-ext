@@ -1,0 +1,160 @@
+{
+  "require": {
+    "prefix": "hpreq",
+    "description": "Hapi.js Require",
+    "body": "const Hapi = require('hapi');"
+  },
+  "new": {
+    "prefix": "hpnew",
+    "description": "Hapi.js new",
+    "body": "const server = new Hapi.Server($1);"
+  },
+  "server connection": {
+    "prefix": "hpconn",
+    "description": "Hapi.js Server Connection",
+    "body": [
+      "server.connection({",
+      "\thost: '${host}',",
+      "\tport: ${port}",
+      "});"
+    ]
+  },
+  "server decorate": {
+    "prefix": "hpdecor",
+    "description": "Hapi.js Server Decorate",
+    "body": "server.decorate('${type}', ${property}, ${method});"
+  },
+  "server ext": {
+    "prefix": "hpext",
+    "description": "Hapi.js Server Extension",
+    "body": [
+      "server.ext('${event}', (request, reply) => {",
+      "\t${1}",
+      "\treturn reply.continue();",
+      "});"
+    ]
+  },
+  "server handler": {
+    "prefix": "hphandler",
+    "description": "Hapi.js Server Handler",
+    "body": [
+      "server.handler('${name}', (route, options) => {",
+      "\t${1}",
+      "});"
+    ]
+  },
+  "server inject": {
+    "prefix": "hpinject",
+    "description": "Hapi.js Server Inject",
+    "body": [
+      "server.inject(${options}, (res) => {",
+      "\t${1}",
+      "});"
+    ]
+  },
+  "server initialize": {
+    "prefix": "hpinit",
+    "description": "Hapi.js Server Initialize",
+    "body": [
+      "server.initialize((err) => {",
+      "\t${1}",
+      "});"
+    ]
+  },
+  "server log": {
+    "prefix": "hplog",
+    "description": "Hapi.js Server Log",
+    "body": "server.log(${tags}, ${data});"
+  },
+  "server lookup": {
+    "prefix": "hplookup",
+    "description": "Hapi.js Server Lookup",
+    "body": "server.lookup(${id});"
+  },
+  "server match": {
+    "prefix": "hpmatch",
+    "description": "Hapi.js Server Match",
+    "body": "server.match('${method}', '${path}');"
+  },
+  "server method": {
+    "prefix": "hpmethod",
+    "description": "Hapi.js Server Methods",
+    "body": "server.method('${name}', ${method}, {${1}});"
+  },
+  "server start": {
+    "prefix": "hpstart",
+    "description": "Hapi.js Server Start",
+    "body": [
+      "server.start((err) => {",
+      "\tif (err) {",
+      "\t\tthrow err;",
+      "\t}",
+      "\tconsole.log('Server running at ' + server.info.uri);",
+      "});"
+    ]
+  },
+  "server state": {
+    "prefix": "hpstate",
+    "description": "Hapi.js Server State",
+    "body": "server.state('${name}', {$0});"
+  },
+  "server stop": {
+    "prefix": "hpstop",
+    "description": "Hapi.js Server Stop",
+    "body": [
+      "server.stop({ timeout: ${timeout} }, (err) => {",
+      "\tif (err) {",
+      "\t\tthrow err;",
+      "\t}",
+      "\tconsole.log('Server stopped');",
+      "});"
+    ]
+  },
+  "server route": {
+    "prefix": "hproute",
+    "description": "Hapi.js Server Route",
+    "body": [
+      "server.route({",
+      "\tpath: '${/path}',",
+      "\tmethod: '${GET}',",
+      "\thandler: (request, reply) => {",
+      "\t\treply(${response});",
+      "\t}",
+      "});"
+    ]
+  },
+  "server register one plugin": {
+    "prefix": "hpreg",
+    "description": "Hapi.js Load One Plugin",
+    "body": [
+      "server.register(require('${plugin}'), (err) => {",
+      "\tif (err) {",
+      "\t\tconsole.error('Failed to load plugin:', err);",
+      "\t}",
+      "});"
+    ]
+  },
+  "server register multiple plugin": {
+    "prefix": "hpregmulti",
+    "description": "Hapi.js Load Multiple Plugin",
+    "body": [
+      "server.register([require('${plugin1}'), require('${plugin2}')], (err) => {",
+      "\tif (err) {",
+      "\t\tconsole.error('Failed to load plugins:', err);",
+      "\t}",
+      "});"
+    ]
+  },
+  "server views": {
+    "prefix": "hpviews",
+    "description": "Hapi.js Views",
+    "body": [
+      "server.views({",
+      "\tengines: {",
+      "\t\thtml: ${html}",
+      "\t},",
+      "\tpath: '${path}'",
+      "});"
+    ]
+  }
+}

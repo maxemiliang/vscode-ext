@@ -1,0 +1,36 @@
+{
+	"name": "vscode-hapijs-snippets",
+	"publisher": "deerawan",
+	"version": "2.0.0",
+	"displayName": "Hapi.js Snippets",
+	"description": "Hapi.js Snippets for Javascript ES6",
+	"license": "See License in LICENSE.md",
+	"icon": "images/hapijs-logo.png",
+	"galleryBanner": {
+		"color": "#ba6907",
+		"theme": "dark"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/deerawan/vscode-hapijs-snippets"
+	},
+	"engines": {
+		"vscode": "0.10.x"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "javascript",
+				"path": "./snippets/javascript.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "666e5aec-d048-42d4-8756-f625579eb558",
+		"publisherId": "c9174db5-9cbf-425f-8309-bc5d0be78c03",
+		"publisherDisplayName": "Budi Irawan"
+	}
+}
