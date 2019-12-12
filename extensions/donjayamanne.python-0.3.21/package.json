@@ -230,7 +230,7 @@
             "type": "python",
             "request": "launch",
             "stopOnEntry": true,
-            "pythonPath" :"${config.python.pythonPath}",
+            "pythonPath": "${config.python.pythonPath}",
             "program": "${file}",
             "debugOptions": [
               "WaitOnAbnormalExit",
@@ -243,7 +243,7 @@
             "type": "python",
             "request": "launch",
             "stopOnEntry": true,
-            "pythonPath" :"${config.python.pythonPath}",
+            "pythonPath": "${config.python.pythonPath}",
             "program": "${file}",
             "externalConsole": true,
             "debugOptions": [
@@ -256,7 +256,7 @@
             "type": "python",
             "request": "launch",
             "stopOnEntry": true,
-            "pythonPath" :"${config.python.pythonPath}",
+            "pythonPath": "${config.python.pythonPath}",
             "program": "${workspaceRoot}/manage.py",
             "args": [
               "runserver",
@@ -274,7 +274,7 @@
             "type": "python",
             "request": "launch",
             "stopOnEntry": true,
-            "pythonPath" :"${config.python.pythonPath}",
+            "pythonPath": "${config.python.pythonPath}",
             "program": "${workspaceRoot}/console.py",
             "args": [
               "dev",
@@ -295,7 +295,7 @@
             "remoteRoot": "${workspaceRoot}",
             "port": 3000,
             "secret": "my_secret",
-            "host":"localhost"
+            "host": "localhost"
           }
         ]
       }
@@ -590,7 +590,9 @@
     "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
     "compile": "node ./node_modules/vscode/bin/compile  -watch -p ./ && installServerIntoExtension ./out ./src/server/package.json ./src/server/tsconfig.json",
     "postinstall": "node ./node_modules/vscode/bin/install",
-    "test": "node ./node_modules/vscode/bin/test"
+    "test": "node ./node_modules/vscode/bin/test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "diff-match-patch": "^1.0.0",
@@ -605,11 +607,13 @@
     "vscode-debugprotocol": "^1.0.1",
     "vscode-extension-telemetry": "0.0.5",
     "vscode-languageclient": "^1.1.0",
-    "vscode-languageserver": "^1.1.0"
+    "vscode-languageserver": "^1.1.0",
+    "snyk": "^1.258.2"
   },
   "devDependencies": {
     "retyped-diff-match-patch-tsd-ambient": "^1.0.0-0",
     "typescript": "^1.8.5",
     "vscode": "^0.11.0"
-  }
+  },
+  "snyk": true
 }
