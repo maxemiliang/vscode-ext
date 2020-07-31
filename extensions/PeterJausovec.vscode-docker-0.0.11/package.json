@@ -196,7 +196,7 @@
 		"@types/node": "^6.0.40"
 	},
 	"dependencies": {
-		"dockerfile_lint": "^0.2.4",
+		"dockerfile_lint": "^0.3.4",
 		"dockerode": "^2.3.0"
 	},
 	"__metadata": {
