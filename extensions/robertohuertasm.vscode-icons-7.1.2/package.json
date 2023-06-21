@@ -199,7 +199,7 @@
 	"dependencies": {
 		"lodash": "^4.17.2",
 		"open": "0.0.5",
-		"semver": "^5.3.0"
+		"semver": "^7.5.2"
 	},
 	"__metadata": {
 		"id": "9ccc1dd7-7ec4-4a46-bd4f-7d7b8b9d322a",
